@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sai Kumar | Software Professional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float { animation: float 4s ease-in-out infinite; }
+        .glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans leading-relaxed">
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 p-4">
+        <div class="max-w-4xl w-full glass rounded-3xl shadow-2xl overflow-hidden md:flex">
+
+            <!-- Sidebar/Profile -->
+            <div class="md:w-1/3 bg-white/40 p-8 flex flex-col items-center text-center border-b md:border-b-0 md:border-r border-white/20">
+                <div class="w-40 h-40 rounded-full border-4 border-white shadow-xl overflow-hidden mb-6 animate-float">
+                    <img src="profile.jpg" alt="Sai Kumar" class="w-full h-full object-cover">
+                </div>
+                <h1 class="text-2xl font-bold tracking-tight">Sai Kumar K G</h1>
+                <p class="text-indigo-700 font-medium italic">Software Professional</p>
+
+                <div class="mt-6 space-y-3 text-sm w-full">
+                    <div class="flex justify-between border-b pb-2"><span>Height</span><span class="font-bold">5'X"</span></div>
+                    <div class="flex justify-between border-b pb-2"><span>Education</span><span class="font-bold">B.Tech CSE</span></div>
+                    <div class="flex justify-between border-b pb-2"><span>Location</span><span class="font-bold">Japan 🇯🇵</span></div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="md:w-2/3 p-8 md:p-12 overflow-y-auto max-h-[80vh] md:max-h-full">
+                <h2 class="text-3xl font-bold mb-4 text-indigo-900">Hello, I'm Sai.</h2>
+                <p class="text-lg mb-6">
+                    I’m a software engineer currently building my career in Japan's private sector. I believe life is a mix of logical code and flavorful experiences.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Column 1: Passions -->
+                    <div class="space-y-4">
+                        <h3 class="font-bold text-indigo-600 uppercase text-xs tracking-widest">My World</h3>
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-plane-departure mt-1 text-purple-500"></i>
+                            <div>
+                                <p class="font-bold">Avid Traveler</p>
+                                <p class="text-sm text-slate-600">From the temples of Kyoto to global skylines, I love exploring new cultures.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-utensils mt-1 text-pink-500"></i>
+                            <div>
+                                <p class="font-bold">Culinary Enthusiast</p>
+                                <p class="text-sm text-slate-600">I find peace in the kitchen, experimenting with spices and traditional recipes.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Roots -->
+                    <div class="space-y-4">
+                        <h3 class="font-bold text-indigo-600 uppercase text-xs tracking-widest">The Foundation</h3>
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-house-chimney mt-1 text-indigo-500"></i>
+                            <div>
+                                <p class="font-bold">Nuclear Family</p>
+                                <p class="text-sm text-slate-600">I come from a grounded, middle-class family that values respect and togetherness.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-briefcase mt-1 text-slate-500"></i>
+                            <div>
+                                <p class="font-bold">Career Driven</p>
+                                <p class="text-sm text-slate-600">Passionate about full-stack development and long-term growth in Japan.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="my-8 border-slate-200">
+
+                <div class="bg-indigo-50 p-6 rounded-2xl border border-indigo-100">
+                    <h3 class="font-bold mb-2">Looking For...</h3>
+                    <p class="text-sm italic text-slate-700">
+                        "I am looking for a kind, educated partner who appreciates a good conversation, a home-cooked meal, and a shared sense of adventure."
+                    </p>
+                </div>
+
+                <div class="mt-8 text-center md:text-left">
+                    <a href="mailto:your-email@example.com" class="inline-block bg-indigo-600 text-white px-8 py-3 rounded-full font-bold shadow-lg hover:bg-indigo-700 transition">
+                        Connect with my Family
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

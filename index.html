@@ -3,116 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sai Kumar K G | Profile</title>
+    <title>Sai Kumar K G | Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
-        body { font-family: 'Outfit', sans-serif; }
-        .profile-gradient { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
-        .stat-card { background: #f8fafc; border-radius: 1rem; transition: all 0.3s ease; }
-        .stat-card:hover { background: #ffffff; box-shadow: 0 10px 20px rgba(0,0,0,0.05); transform: translateY(-2px); }
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+        
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: #fdfeff;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .hero-gradient {
+            background: radial-gradient(circle at top right, #e0e7ff 0%, #ffffff 50%),
+                        radial-gradient(circle at bottom left, #f5f3ff 0%, #ffffff 50%);
+        }
+
+        .floating {
+            animation: floating 6s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .chip {
+            background: rgba(99, 102, 241, 0.1);
+            color: #4f46e5;
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
     </style>
 </head>
-<body class="bg-white text-slate-700 antialiased">
+<body class="hero-gradient min-h-screen antialiased">
 
-    <!-- Top Branding -->
-    <div class="h-64 profile-gradient w-full absolute top-0 left-0 z-0"></div>
+    <!-- Subtle Background Elements -->
+    <div class="fixed top-0 left-0 w-full h-full overflow-hidden pointer-events-none -z-10">
+        <div class="absolute top-[10%] left-[15%] w-64 h-64 bg-indigo-200/30 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-[10%] right-[15%] w-96 h-96 bg-purple-200/20 rounded-full blur-3xl"></div>
+    </div>
 
-    <main class="relative z-10 max-w-4xl mx-auto px-4 pt-24 pb-12">
-        <!-- Main Profile Header -->
-        <div class="bg-white rounded-3xl shadow-xl border border-slate-100 overflow-hidden mb-8">
-            <div class="p-8 md:p-12 text-center md:text-left md:flex items-center gap-10">
-                <div class="mb-6 md:mb-0 flex-shrink-0">
-                    <img src="profile.jpg" alt="Sai Kumar" class="w-40 h-40 rounded-3xl object-cover shadow-lg mx-auto md:mx-0 ring-4 ring-white">
+    <main class="max-w-5xl mx-auto px-6 py-12">
+        
+        <!-- Header Section -->
+        <div class="flex flex-col md:flex-row items-center gap-12 mb-16">
+            <div class="relative">
+                <div class="absolute -inset-4 bg-gradient-to-tr from-indigo-500 to-purple-500 rounded-[3rem] blur-xl opacity-20 floating"></div>
+                <img src="profile.jpg" alt="Sai Kumar" class="relative w-56 h-56 object-cover rounded-[2.5rem] shadow-2xl border-4 border-white">
+            </div>
+            
+            <div class="text-center md:text-left">
+                <div class="inline-flex items-center gap-2 mb-4">
+                    <span class="chip">Based in Japan 🇯🇵</span>
+                    <span class="chip">Software Professional</span>
                 </div>
-                <div>
-                    <h1 class="text-4xl font-bold text-slate-900 mb-2">Sai Kumar K G</h1>
-                    <p class="text-xl text-indigo-600 font-medium mb-4">Software Developer in Japan</p>
-                    <p class="text-slate-500 leading-relaxed text-lg max-w-2xl">
-                        I am a Computer Science graduate currently living and working at **Xtreme-D** in Japan. I love solving problems through technology, but I also believe in enjoying life through travel and good food.
-                    </p>
+                <h1 class="text-5xl md:text-6xl font-extrabold text-slate-900 tracking-tight mb-4">
+                    Sai Kumar <span class="text-indigo-600">K G</span>
+                </h1>
+                <p class="text-xl text-slate-600 max-w-xl leading-relaxed">
+                    I build software at **Xtreme-D** in Tokyo. I love simple things: coding, exploring new cities, and cooking good meals.
+                </p>
+            </div>
+        </div>
+
+        <!-- Info Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            
+            <!-- Quick Facts Card -->
+            <div class="glass-panel p-8 rounded-[2rem] shadow-sm">
+                <h3 class="text-sm uppercase tracking-widest text-slate-400 font-extrabold mb-6">At a Glance</h3>
+                <div class="space-y-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600">
+                            <i class="fa-solid fa-cake-candles"></i>
+                        </div>
+                        <div><p class="text-xs text-slate-400">Born</p><p class="font-bold">January 1, 1998</p></div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600">
+                            <i class="fa-solid fa-arrows-up-down"></i>
+                        </div>
+                        <div><p class="text-xs text-slate-400">Height</p><p class="font-bold">175 cm</p></div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600">
+                            <i class="fa-solid fa-dharmachakra"></i>
+                        </div>
+                        <div><p class="text-xs text-slate-400">Community</p><p class="font-bold">Hindu (Ganiga)</p></div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Quick Details Bar -->
-            <div class="bg-slate-50 border-t border-slate-100 p-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-                <div><p class="text-xs uppercase text-slate-400 font-bold">Born</p><p class="font-semibold text-slate-800">Jan 1, 1998</p></div>
-                <div><p class="text-xs uppercase text-slate-400 font-bold">Height</p><p class="font-semibold text-slate-800">175 cm</p></div>
-                <div><p class="text-xs uppercase text-slate-400 font-bold">Religion</p><p class="font-semibold text-slate-800">Hindu (Ganiga)</p></div>
-                <div><p class="text-xs uppercase text-slate-400 font-bold">Status</p><p class="font-semibold text-slate-800">Unmarried</p></div>
+            <!-- Horoscope Card -->
+            <div class="glass-panel p-8 rounded-[2rem] shadow-sm">
+                <h3 class="text-sm uppercase tracking-widest text-slate-400 font-extrabold mb-6">Horoscope</h3>
+                <div class="space-y-6">
+                    <div><p class="text-xs text-slate-400 mb-1 italic">Rashi</p><p class="text-lg font-bold">Makara (Capricorn)</p></div>
+                    <div><p class="text-xs text-slate-400 mb-1 italic">Nakshatra</p><p class="text-lg font-bold">Sravana</p></div>
+                    <div><p class="text-xs text-slate-400 mb-1 italic">Birth Details</p><p class="text-lg font-bold">06:33 AM | Nellore</p></div>
+                </div>
+            </div>
+
+            <!-- Family Card -->
+            <div class="glass-panel p-8 rounded-[2rem] shadow-sm">
+                <h3 class="text-sm uppercase tracking-widest text-slate-400 font-extrabold mb-6">My Roots</h3>
+                <div class="space-y-4">
+                    <div class="p-4 bg-white/50 rounded-2xl border border-white">
+                        <p class="text-xs text-slate-400">Father</p>
+                        <p class="font-bold">K V Gopinath <span class="text-[10px] font-normal text-slate-500 uppercase ml-2">(Self-Employed)</span></p>
+                    </div>
+                    <div class="p-4 bg-white/50 rounded-2xl border border-white">
+                        <p class="text-xs text-slate-400">Mother</p>
+                        <p class="font-bold">Thejovathi K G <span class="text-[10px] font-normal text-slate-500 uppercase ml-2">(Homemaker)</span></p>
+                    </div>
+                    <div class="p-4 bg-white/50 rounded-2xl border border-white">
+                        <p class="text-xs text-slate-400">Sister</p>
+                        <p class="font-bold">Elder Sister <span class="text-[10px] font-normal text-slate-500 uppercase ml-2">(IT Professional)</span></p>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Left Side: Horoscope & Family -->
-            <div class="md:col-span-1 space-y-8">
-                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm">
-                    <h3 class="text-lg font-bold mb-4 flex items-center gap-2"><i class="fa-solid fa-moon text-indigo-500"></i> Horoscope</h3>
-                    <div class="space-y-3">
-                        <div class="flex justify-between"><span class="text-slate-500 text-sm">Rashi</span><span class="font-semibold">Makara</span></div>
-                        <div class="flex justify-between"><span class="text-slate-500 text-sm">Nakshatra</span><span class="font-semibold">Sravana</span></div>
-                        <div class="flex justify-between"><span class="text-slate-500 text-sm">Time</span><span class="font-semibold">06:33 AM</span></div>
-                        <div class="flex justify-between"><span class="text-slate-500 text-sm">Place</span><span class="font-semibold">Nellore</span></div>
-                    </div>
+        <!-- Hobbies & Vision -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div class="glass-panel p-10 rounded-[2.5rem]">
+                <h3 class="text-2xl font-bold text-slate-900 mb-6">Lifestyle</h3>
+                <div class="flex flex-wrap gap-3 mb-6">
+                    <span class="px-4 py-2 bg-white rounded-xl shadow-sm border border-slate-100 text-sm font-semibold">✈️ Travel Enthusiast</span>
+                    <span class="px-4 py-2 bg-white rounded-xl shadow-sm border border-slate-100 text-sm font-semibold">🍳 Love Cooking</span>
+                    <span class="px-4 py-2 bg-white rounded-xl shadow-sm border border-slate-100 text-sm font-semibold">🍗 Non-Vegetarian</span>
                 </div>
-
-                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm">
-                    <h3 class="text-lg font-bold mb-4 flex items-center gap-2"><i class="fa-solid fa-users text-indigo-500"></i> Family</h3>
-                    <div class="space-y-4">
-                        <div><p class="text-xs text-slate-400 uppercase">Father</p><p class="font-semibold">K V Gopinath</p><p class="text-xs text-slate-500">Self-Employed</p></div>
-                        <div><p class="text-xs text-slate-400 uppercase">Mother</p><p class="font-semibold">Thejovathi K G</p><p class="text-xs text-slate-500">Homemaker</p></div>
-                        <div><p class="text-xs text-slate-400 uppercase">Sister</p><p class="font-semibold">Elder Sister</p><p class="text-xs text-slate-500">IT Employee</p></div>
-                    </div>
-                </div>
+                <p class="text-slate-600 leading-relaxed">
+                    I am a friendly and down-to-earth person. I enjoy exploring new cultures and hanging out with friends. Life is all about finding a balance between growth and happiness.
+                </p>
             </div>
 
-            <!-- Right Side: Lifestyle & Hobbies -->
-            <div class="md:col-span-2 space-y-8">
-                <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
-                    <h3 class="text-xl font-bold mb-6">About My Life</h3>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                        <div class="stat-card p-5">
-                            <i class="fa-solid fa-plane-departure text-blue-500 mb-3 text-xl"></i>
-                            <h4 class="font-bold mb-1">Traveling</h4>
-                            <p class="text-sm text-slate-500 leading-relaxed">I love exploring new places and learning about different cultures across the world.</p>
-                        </div>
-                        <div class="stat-card p-5">
-                            <i class="fa-solid fa-kitchen-set text-orange-500 mb-3 text-xl"></i>
-                            <h4 class="font-bold mb-1">Cooking</h4>
-                            <p class="text-sm text-slate-500 leading-relaxed">Cooking is my passion. I enjoy making tasty food and trying out new recipes.</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-indigo-50 rounded-2xl p-6 border border-indigo-100">
-                        <h4 class="font-bold text-indigo-900 mb-2 flex items-center gap-2">
-                            <i class="fa-solid fa-sparkles"></i> Personality & Habits
-                        </h4>
-                        <p class="text-indigo-800 text-sm leading-relaxed">
-                            I am a friendly and down-to-earth person who values family and career growth. I enjoy hanging out with my friends and keeping life simple.
-                        </p>
-                        <div class="mt-4 flex gap-3">
-                            <span class="bg-white px-3 py-1 rounded-full text-xs font-bold text-indigo-600 shadow-sm">Non-Vegetarian</span>
-                            <span class="bg-white px-3 py-1 rounded-full text-xs font-bold text-indigo-600 shadow-sm">Software Professional</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Final Thought -->
-                <div class="bg-slate-900 rounded-3xl p-8 text-white text-center">
-                    <h3 class="text-xl font-bold mb-4">What I am looking for</h3>
-                    <p class="text-slate-300 italic">
-                        "I am looking for a kind and educated partner who shares a balance of family values and a positive outlook on life. Someone who would enjoy traveling and sharing a good meal together."
-                    </p>
-                </div>
+            <div class="bg-slate-900 p-10 rounded-[2.5rem] text-white flex flex-col justify-center">
+                <i class="fa-solid fa-quote-left text-4xl text-indigo-400 mb-6"></i>
+                <h3 class="text-2xl font-bold mb-4 italic">I'm looking for...</h3>
+                <p class="text-slate-300 text-lg leading-relaxed">
+                    A kind and educated partner who shares a balance of family values and a positive outlook on life. Someone who enjoys travel and sharing a good home-cooked meal.
+                </p>
             </div>
         </div>
+
+        <!-- Footer -->
+        <footer class="text-center text-slate-400 text-sm mt-20">
+            <p>&copy; 2026 Sai Kumar K G • Software Developer, Japan</p>
+        </footer>
     </main>
-
-    <footer class="text-center pb-12 text-slate-400 text-sm">
-        <p>&copy; 2026 Sai Kumar K G</p>
-    </footer>
 
 </body>
 </html>

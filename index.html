@@ -19,7 +19,7 @@
         .modal { display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); backdrop-filter: blur(5px); }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans">
+<body class="bg-slate-50 text-slate-800 font-sans leading-relaxed">
 
     <!-- Hero Section -->
     <section class="min-h-screen py-12 px-4 bg-gradient-to-tr from-slate-950 via-indigo-950 to-slate-900">
@@ -52,26 +52,28 @@
                         </p>
                     </div>
 
+                    <!-- Horoscope & Income Grid -->
                     <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
                         <div class="p-4 bg-white/5 rounded-xl border border-white/10">
                             <i class="fa-solid fa-moon text-indigo-400 mb-2"></i>
-                            <p class="text-xs uppercase opacity-60">Rashi</p>
-                            <p class="font-bold">Makara (Capricorn)</p>
+                            <p class="text-xs uppercase opacity-60">Nakshatra</p>
+                            <p class="font-bold text-sm">Sravana</p>
                         </div>
                         <div class="p-4 bg-white/5 rounded-xl border border-white/10">
-                            <i class="fa-solid fa-location-dot text-indigo-400 mb-2"></i>
-                            <p class="text-xs uppercase opacity-60">Birth Place</p>
-                            <p class="font-bold text-sm">Nellore, AP</p>
+                            <i class="fa-solid fa-coins text-indigo-400 mb-2"></i>
+                            <p class="text-xs uppercase opacity-60">Annual Salary</p>
+                            <p class="font-bold text-sm">5.5M JPY</p>
                         </div>
                         <div class="p-4 bg-white/5 rounded-xl border border-white/10">
                             <i class="fa-solid fa-clock text-indigo-400 mb-2"></i>
                             <p class="text-xs uppercase opacity-60">Birth Time</p>
-                            <p class="font-bold">06:33 AM</p>
+                            <p class="font-bold text-sm">06:33 AM</p>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <!-- Info Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 
                 <!-- Family Card -->
@@ -82,30 +84,37 @@
                     <ul class="space-y-4 text-sm">
                         <li class="flex justify-between border-b pb-2"><span>Father</span><span class="font-bold text-slate-700">K V Gopinath (Self-Employed)</span></li>
                         <li class="flex justify-between border-b pb-2"><span>Mother</span><span class="font-bold text-slate-700">Thejovathi K G (Homemaker)</span></li>
-                        <li class="flex justify-between border-b pb-2"><span>Siblings</span><span class="font-bold text-slate-700">One Elder Sister</span></li>
+                        <li class="flex justify-between border-b pb-2"><span>Siblings</span><span class="font-bold text-slate-700">One Elder Sister (IT Professional)</span></li>
                         <li class="flex justify-between pb-2"><span>Caste</span><span class="font-bold text-indigo-700">Ganiga / Gandla</span></li>
                     </ul>
                 </div>
 
-                <!-- Lifestyle & Habits -->
+                <!-- Lifestyle Card -->
                 <div class="card">
                     <h3 class="text-xl font-bold mb-6 flex items-center gap-2 text-indigo-900">
-                        <i class="fa-solid fa-leaf text-green-600"></i> Lifestyle & Interests
+                        <i class="fa-solid fa-leaf text-green-600"></i> Lifestyle & Identity
                     </h3>
                     <div class="space-y-4">
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-slate-100 rounded-full text-xs font-bold">✈️ Traveling</span>
-                            <span class="px-3 py-1 bg-slate-100 rounded-full text-xs font-bold">🍳 Cooking</span>
-                            <span class="px-3 py-1 bg-slate-100 rounded-full text-xs font-bold">🍗 Non-Vegetarian</span>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="p-4 bg-slate-50 rounded-2xl">
+                                <p class="text-xs text-slate-500 uppercase">Diet</p>
+                                <p class="font-bold">Non-Vegetarian</p>
+                            </div>
+                            <div class="p-4 bg-slate-50 rounded-2xl">
+                                <p class="text-xs text-slate-500 uppercase">Birth Place</p>
+                                <p class="font-bold">Nellore, AP</p>
+                            </div>
                         </div>
-                        <p class="text-sm text-slate-600 leading-relaxed">
-                            I am a friendly and down-to-earth person. I enjoy exploring new cultures, hanging out with friends, and I find cooking to be a great way to relax.
-                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-indigo-50 text-indigo-600 rounded-full text-xs font-bold">✈️ Traveling</span>
+                            <span class="px-3 py-1 bg-indigo-50 text-indigo-600 rounded-full text-xs font-bold">🍳 Cooking</span>
+                            <span class="px-3 py-1 bg-indigo-50 text-indigo-600 rounded-full text-xs font-bold">⚽ Socializing</span>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Partner Preference -->
-                <div class="card md:col-span-2 bg-indigo-900 text-white shadow-indigo-200 border-none">
+                <div class="card md:col-span-2 bg-indigo-900 text-white border-none shadow-indigo-200">
                     <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
                         <i class="fa-solid fa-star text-yellow-400"></i> Partner Preference
                     </h3>
@@ -114,7 +123,7 @@
                     </p>
                     <div class="text-center">
                         <button onclick="document.getElementById('contactModal').style.display='block'" class="bg-indigo-500 hover:bg-indigo-400 text-white px-10 py-4 rounded-full font-bold shadow-xl transition transform hover:scale-105">
-                            <i class="fa-solid fa-lock-open mr-2"></i> Request Contact Info
+                            <i class="fa-solid fa-lock-open mr-2"></i> View Contact Details
                         </button>
                     </div>
                 </div>
@@ -130,7 +139,7 @@
                 <div class="bg-indigo-50 p-4 rounded-2xl mb-6">
                     <p class="text-indigo-600 font-bold text-xl">+81-7074268110</p>
                 </div>
-                <p class="text-slate-600 mb-6 text-sm">Please mention that you viewed the profile on this website when you reach out.</p>
+                <p class="text-slate-600 mb-6 text-sm italic">Please mention that you viewed the profile on this website when you reach out.</p>
                 <button onclick="document.getElementById('contactModal').style.display='none'" class="bg-slate-900 text-white px-8 py-2 rounded-full font-bold">Close</button>
             </div>
         </div>

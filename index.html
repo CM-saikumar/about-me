@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sai Kumar K G | Professional Profile</title>
+    <title>Sai Kumar K G | Profile</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -16,6 +16,7 @@
         .glass { background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); }
         .card { background: white; border-radius: 1.5rem; padding: 2rem; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease; }
         .card:hover { transform: translateY(-5px); }
+        .modal { display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); backdrop-filter: blur(5px); }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans">
@@ -35,7 +36,8 @@
                     
                     <div class="w-full space-y-3 text-sm text-slate-300 bg-white/5 p-5 rounded-2xl">
                         <div class="flex justify-between border-b border-white/10 pb-2"><span>DOB</span><span class="text-white font-bold">Jan 1, 1998</span></div>
-                        <div class="flex justify-between border-b border-white/10 pb-2"><span>Height</span><span class="text-white font-bold">175 cm (5'9")</span></div>
+                        <div class="flex justify-between border-b border-white/10 pb-2"><span>Height</span><span class="text-white font-bold">5' 9"</span></div>
+                        <div class="flex justify-between border-b border-white/10 pb-2"><span>Complexion</span><span class="text-white font-bold">Dusky</span></div>
                         <div class="flex justify-between"><span>Location</span><span class="text-white font-bold">Japan 🇯🇵</span></div>
                     </div>
                 </div>
@@ -44,9 +46,9 @@
                     <div class="mb-8">
                         <h2 class="text-indigo-400 uppercase tracking-widest text-xs font-bold mb-2">About Me</h2>
                         <p class="text-xl leading-relaxed">
-                            I am a <b>Computer Science</b> graduate currently working as a <b>Software Developer</b> at <b>Xtreme-D</b> in Japan. 
-                            I am focused on my career in the IT sector with a long-term goal of becoming a <b>Chief Executive</b>. 
-                            Outside of work, I have a deep love for <b>traveling</b> and <b>cooking</b>.
+                            I am a <b>BE Computer Science</b> graduate currently working as a <b>Software Developer</b> at <b>Xtreme-D</b> in Japan. 
+                            My career goal is to excel in the IT sector and eventually transition into a <b>Chief Executive</b> role. 
+                            I plan to stay in Japan for the long term (<b>5-10+ years</b>) while maintaining my love for <b>traveling</b> and <b>cooking</b>.
                         </p>
                     </div>
 
@@ -58,9 +60,9 @@
                             <p class="font-bold">Makara (Capricorn)</p>
                         </div>
                         <div class="p-4 bg-white/5 rounded-xl border border-white/10">
-                            <i class="fa-solid fa-star text-indigo-400 mb-2"></i>
-                            <p class="text-xs uppercase opacity-60">Nakshatra</p>
-                            <p class="font-bold">Sravana</p>
+                            <i class="fa-solid fa-location-dot text-indigo-400 mb-2"></i>
+                            <p class="text-xs uppercase opacity-60">Birth Place</p>
+                            <p class="font-bold text-sm">Nellore, AP</p>
                         </div>
                         <div class="p-4 bg-white/5 rounded-xl border border-white/10">
                             <i class="fa-solid fa-clock text-indigo-400 mb-2"></i>
@@ -82,65 +84,50 @@
                     <ul class="space-y-4 text-sm">
                         <li class="flex justify-between border-b pb-2"><span>Father</span><span class="font-bold text-slate-700">K V Gopinath (Self-Employed)</span></li>
                         <li class="flex justify-between border-b pb-2"><span>Mother</span><span class="font-bold text-slate-700">Thejovathi K G (Homemaker)</span></li>
-                        <li class="flex justify-between border-b pb-2"><span>Sisters</span><span class="font-bold text-slate-700">One Elder Sister (IT Professional)</span></li>
-                        <li class="flex justify-between pb-2"><span>Family Type</span><span class="font-bold text-indigo-700">Middle Class, Nuclear</span></li>
+                        <li class="flex justify-between border-b pb-2"><span>Siblings</span><span class="font-bold text-slate-700">One Elder Sister</span></li>
+                        <li class="flex justify-between pb-2"><span>Caste</span><span class="font-bold text-indigo-700">Ganiga / Gandla</span></li>
                     </ul>
                 </div>
 
-                <!-- Future & Lifestyle -->
+                <!-- Lifestyle & Habits -->
                 <div class="card">
                     <h3 class="text-xl font-bold mb-6 flex items-center gap-2 text-indigo-900">
-                        <i class="fa-solid fa-bullseye text-indigo-600"></i> Future & Lifestyle
+                        <i class="fa-solid fa-leaf text-green-600"></i> Lifestyle & Interests
                     </h3>
                     <div class="space-y-4">
-                        <div class="p-4 bg-slate-50 rounded-2xl">
-                            <p class="text-xs text-slate-500 uppercase font-bold">Stay in Japan</p>
-                            <p class="font-bold">Planning to stay for 5–10 years or more</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-slate-100 rounded-full text-xs font-bold">✈️ Traveling</span>
+                            <span class="px-3 py-1 bg-slate-100 rounded-full text-xs font-bold">🍳 Cooking</span>
+                            <span class="px-3 py-1 bg-slate-100 rounded-full text-xs font-bold">🍗 Non-Vegetarian</span>
                         </div>
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="p-4 bg-slate-50 rounded-2xl">
-                                <p class="text-xs text-slate-500 uppercase">Diet</p>
-                                <p class="font-bold">Non-Vegetarian</p>
-                            </div>
-                            <div class="p-4 bg-slate-50 rounded-2xl">
-                                <p class="text-xs text-slate-500 uppercase">Birth Place</p>
-                                <p class="font-bold">Nellore</p>
-                            </div>
-                        </div>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            I am a friendly and down-to-earth person. I enjoy exploring new cultures, hanging out with friends, and I find cooking to be a great way to relax.
+                        </p>
                     </div>
                 </div>
 
-                <!-- Interests Card -->
-                <div class="card md:col-span-2">
-                    <h3 class="text-xl font-bold mb-6 flex items-center gap-2 text-indigo-900">
-                        <i class="fa-solid fa-heart text-pink-600"></i> Personal Interests
-                    </h3>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50">
-                            <i class="fa-solid fa-plane-up text-2xl text-indigo-500"></i>
-                            <div><p class="font-bold">Travel</p><p class="text-xs text-slate-500">Exploring new cities</p></div>
-                        </div>
-                        <div class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50">
-                            <i class="fa-solid fa-fire-burner text-2xl text-orange-500"></i>
-                            <div><p class="font-bold">Cooking</p><p class="text-xs text-slate-500">Tasty recipes</p></div>
-                        </div>
-                        <div class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50">
-                            <i class="fa-solid fa-users text-2xl text-blue-500"></i>
-                            <div><p class="font-bold">Socializing</p><p class="text-xs text-slate-500">Hanging with friends</p></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Partner Preference -->
-                <div class="card md:col-span-2 bg-indigo-900 text-white shadow-indigo-200 border-none">
-                    <h3 class="text-xl font-bold mb-4">Partner Preference</h3>
-                    <p class="text-indigo-100 italic leading-relaxed text-lg">
-                        "I am seeking a partner who is kind-hearted, educated, and grounded. Someone who values family togetherness and is ready to share a life filled with new adventures, travel, and good food."
-                    </p>
+                <!-- Contact Request Section -->
+                <div class="card md:col-span-2 bg-indigo-900 text-white shadow-indigo-200 border-none text-center">
+                    <h3 class="text-xl font-bold mb-4">Interested in connecting?</h3>
+                    <p class="text-indigo-200 mb-8 text-sm italic">Privacy is important to us. Please click below for contact information.</p>
+                    <button onclick="document.getElementById('contactModal').style.display='block'" class="bg-indigo-500 hover:bg-indigo-400 text-white px-10 py-4 rounded-full font-bold shadow-xl transition transform hover:scale-105">
+                        <i class="fa-solid fa-lock-open mr-2"></i> Request Contact Info
+                    </button>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="bg-white rounded-3xl p-8 max-w-sm w-full text-center shadow-2xl">
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">Contact Request</h2>
+                <p class="text-slate-600 mb-6 text-sm">To maintain privacy, please express interest or request contact details through the <b>matrimonial platform</b> where you viewed this link.</p>
+                <button onclick="document.getElementById('contactModal').style.display='none'" class="bg-slate-900 text-white px-8 py-2 rounded-full font-bold">Close</button>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>
